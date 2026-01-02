@@ -5,6 +5,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Compound Interest Calculator | Portfolio Project</title>
+
+  <!-- SEO & Social Meta Tags -->
   <meta name="description"
     content="A modern, responsive Compound Interest Calculator web app. Calculate compound interest with a professional UI. Built with HTML, CSS, and JavaScript. Portfolio-ready and open source." />
   <meta name="keywords"
@@ -17,61 +19,67 @@
   <meta property="og:image" content="https://raw.githubusercontent.com/yourusername/yourrepo/main/preview.png" />
   <meta property="og:url" content="https://yourusername.github.io/yourrepo/" />
   <link rel="canonical" href="https://yourusername.github.io/yourrepo/" />
+
+  <!-- Stylesheet -->
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <!--
-    Compound Interest Calculator
-    Professional, portfolio-ready web app
-    Built with HTML, CSS, and JavaScript
-    Author: Your Name
-    GitHub: https://github.com/yourusername/yourrepo
-  -->
+  <!-- Theme Toggle Button -->
   <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
     <span id="theme-toggle-icon" aria-hidden="true">🌙</span>
     <span id="theme-toggle-text" class="sr-only">Toggle dark mode</span>
   </button>
-  <main class="card">
+
+  <!-- Main Calculator Card -->
+  <main class="card" role="main">
     <h1>Compound Interest Calculator</h1>
+
     <form id="calc-form" autocomplete="off" novalidate>
-      <!-- Principal input -->
+      <!-- Principal Amount -->
       <div class="form-group">
         <label for="principal">Principal Amount</label>
         <input type="number" id="principal" min="0" step="0.01" required placeholder="e.g. 1000"
-          aria-label="Principal Amount" autocomplete="off" />
+          aria-describedby="principal-error" autocomplete="off" />
         <div class="error" id="principal-error" aria-live="polite"></div>
       </div>
-      <!-- Annual Interest Rate input -->
+
+      <!-- Annual Interest Rate -->
       <div class="form-group">
         <label for="rate">Annual Interest Rate (%)</label>
-        <input type="number" id="rate" min="0" step="0.01" required placeholder="e.g. 5"
-          aria-label="Annual Interest Rate" autocomplete="off" />
+        <input type="number" id="rate" min="0" step="0.01" required placeholder="e.g. 5" aria-describedby="rate-error"
+          autocomplete="off" />
         <div class="error" id="rate-error" aria-live="polite"></div>
       </div>
-      <!-- Time input -->
+
+      <!-- Time in Years -->
       <div class="form-group">
         <label for="years">Time (years)</label>
-        <input type="number" id="years" min="0" step="1" required placeholder="e.g. 10" aria-label="Time in years"
+        <input type="number" id="years" min="0" step="1" required placeholder="e.g. 10" aria-describedby="years-error"
           autocomplete="off" />
         <div class="error" id="years-error" aria-live="polite"></div>
       </div>
-      <!-- Compounding Frequency input -->
+
+      <!-- Compounding Frequency -->
       <div class="form-group">
         <label for="frequency">Compounding Frequency (per year)</label>
         <input type="number" id="frequency" min="1" step="1" required placeholder="e.g. 4"
-          aria-label="Compounding Frequency per year" autocomplete="off" />
+          aria-describedby="frequency-error" autocomplete="off" />
         <div class="error" id="frequency-error" aria-live="polite"></div>
       </div>
-      <button type="submit" aria-label="Calculate Compound Interest">Calculate</button>
+
+      <!-- Submit Button -->
+      <button type="submit" class="btn" aria-label="Calculate Compound Interest">Calculate</button>
     </form>
-    <!-- Results section -->
-    <div class="result" id="result" style="display:none">
-      <div>Total Amount: <strong id="total-amount"></strong></div>
-      <div>Compound Interest: <strong id="compound-interest"></strong></div>
-    </div>
+
+    <!-- Results Section -->
+    <section class="result" id="result" style="display:none" aria-live="polite">
+      <p>Total Amount: <strong id="total-amount"></strong></p>
+      <p>Compound Interest: <strong id="compound-interest"></strong></p>
+    </section>
   </main>
-  <!-- JavaScript logic in app.js -->
+
+  <!-- JavaScript -->
   <script src="app.js"></script>
 </body>
 
