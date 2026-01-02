@@ -73,34 +73,6 @@
   </main>
   <!-- JavaScript logic in app.js -->
   <script src="app.js"></script>
-  if (isNaN(principal) || principal <= 0) { errors.principal='Enter a valid principal (> 0)' ; } if (isNaN(rate) || rate
-    <=0) { errors.rate='Enter a valid rate (> 0)' ; } if (isNaN(years) || years <=0) {
-    errors.years='Enter a valid time (> 0)' ; } if (isNaN(frequency) || frequency < 1) {
-    errors.frequency='Enter a valid frequency (>= 1)' ; } return errors; } // --- ui.js --- export function
-    showErrors(errors) { showError('principal-error', errors.principal || '' ); showError('rate-error', errors.rate
-    || '' ); showError('years-error', errors.years || '' ); showError('frequency-error', errors.frequency || '' ); }
-    export function clearErrors() { showErrors({}); } function showError(id, message) {
-    document.getElementById(id).textContent=message; } export function formatMoney(num) { return
-    Number(num).toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 }); } // --- main.js ---
-    import { calculateCompoundInterest, validateInputs, showErrors, clearErrors, formatMoney } from './index.html' ;
-    const form=document.getElementById('calc-form'); const resultDiv=document.getElementById('result'); const
-    totalAmountSpan=document.getElementById('total-amount'); const
-    compoundInterestSpan=document.getElementById('compound-interest'); form.addEventListener('submit', function (e) {
-    e.preventDefault(); const principal=parseFloat(document.getElementById('principal').value); const
-    rate=parseFloat(document.getElementById('rate').value); const years=parseInt(document.getElementById('years').value,
-    10); const frequency=parseInt(document.getElementById('frequency').value, 10); const
-    errors=validateInputs(principal, rate, years, frequency); if (Object.keys(errors).length> 0) {
-    showErrors(errors);
-    resultDiv.style.display = 'none';
-    return;
-    }
-    clearErrors();
-    const { total, interest } = calculateCompoundInterest(principal, rate, years, frequency);
-    totalAmountSpan.textContent = 'NPR' + formatMoney(total);
-    compoundInterestSpan.textContent = 'NPR' + formatMoney(interest);
-    resultDiv.style.display = 'flex';
-    });
-    </script>
-    <script src="app.js"></script>
+</body>
 
 </html>
