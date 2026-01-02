@@ -15,7 +15,7 @@ A modern, responsive Compound Interest Calculator web app built with HTML, CSS, 
 
 ## Demo
 
-[View Live on GitHub Pages](https://yourusername.github.io/yourrepo/)
+[View Live on GitHub Pages](https://bibashjaprel.github.io/compound-intrest/)
 
 ## Usage
 
@@ -46,5 +46,3 @@ A modern, responsive Compound Interest Calculator web app built with HTML, CSS, 
 MIT License. Free to use, modify, and share.
 
 ---
-
-> Built by [Your Name](https://github.com/yourusername) — inspired by modern finance apps.
