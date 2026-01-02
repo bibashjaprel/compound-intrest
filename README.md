@@ -21,7 +21,7 @@ A modern, responsive Compound Interest Calculator web app built with HTML, CSS, 
 
 1. **Clone this repository:**
    ```bash
-   git clone https://github.com/yourusername/yourrepo.git
+   git clone https://github.com/bibashjaprel/compound-intrest.git
    ```
 2. **Open `index.html` in your browser** or deploy to GitHub Pages.
 
